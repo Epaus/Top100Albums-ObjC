@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Networking.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    Networking * networking = [[Networking alloc] init];
+    [networking makeRequest: nil];
 }
 
 

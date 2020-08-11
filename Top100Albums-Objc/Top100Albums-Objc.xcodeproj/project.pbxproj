@@ -17,6 +17,7 @@
 		CED88DDD24E213E10025A6F3 /* Top100Albums_ObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DDC24E213E10025A6F3 /* Top100Albums_ObjcTests.m */; };
 		CED88DE824E213E10025A6F3 /* Top100Albums_ObjcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DE724E213E10025A6F3 /* Top100Albums_ObjcUITests.m */; };
 		CED88DF724E214E80025A6F3 /* AlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DF624E214E80025A6F3 /* AlbumModel.m */; };
+		CED88DFA24E216F50025A6F3 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DF924E216F50025A6F3 /* Networking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		CED88DE724E213E10025A6F3 /* Top100Albums_ObjcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Top100Albums_ObjcUITests.m; sourceTree = "<group>"; };
 		CED88DE924E213E10025A6F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED88DF624E214E80025A6F3 /* AlbumModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumModel.m; sourceTree = "<group>"; };
+		CED88DF924E216F50025A6F3 /* Networking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Networking.m; sourceTree = "<group>"; };
+		CED88DFB24E217080025A6F3 /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
+		CED88DFC24E2171C0025A6F3 /* AlbumModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		CED88DBF24E213E00025A6F3 /* Top100Albums-Objc */ = {
 			isa = PBXGroup;
 			children = (
+				CED88DF824E216CE0025A6F3 /* Networking */,
 				CED88DF524E214B30025A6F3 /* Model */,
 				CED88DC024E213E00025A6F3 /* AppDelegate.h */,
 				CED88DC124E213E00025A6F3 /* AppDelegate.m */,
@@ -144,8 +149,18 @@
 			isa = PBXGroup;
 			children = (
 				CED88DF624E214E80025A6F3 /* AlbumModel.m */,
+				CED88DFC24E2171C0025A6F3 /* AlbumModel.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CED88DF824E216CE0025A6F3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CED88DF924E216F50025A6F3 /* Networking.m */,
+				CED88DFB24E217080025A6F3 /* Networking.h */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +298,7 @@
 				CED88DD324E213E10025A6F3 /* main.m in Sources */,
 				CED88DF724E214E80025A6F3 /* AlbumModel.m in Sources */,
 				CED88DC524E213E00025A6F3 /* SceneDelegate.m in Sources */,
+				CED88DFA24E216F50025A6F3 /* Networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
