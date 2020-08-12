@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Networking.h"
 
-@interface ViewController : UIViewController 
--(instancetype)initWithNetworking:(Networking *)nw;
+
+@protocol ViewControllerDelegate
+- (void)selectedCellAtIndex:(NSInteger)index;
+@end
+
+@interface ViewController : UIViewController <ViewControllerDelegate>
 
 @end
 

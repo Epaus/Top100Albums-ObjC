@@ -10,24 +10,30 @@
 
 
 
+
 @interface TableViewDelegate()
-@property(weak) TableViewDelegate * delegate;
 
 @end
 
 @implementation TableViewDelegate
+id <ViewControllerDelegate> delegate;
 
--(instancetype)initWithDelegate:(TableViewDelegate *)delegate  {
+
+-(instancetype)initWithDelegate:(id *)delegate {
     self = [super init];
        if (self) {
-           _delegate = delegate;
+           delegate = delegate;
        }
        return self;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.delegate selectedCellAtIndex:indexPath.row];
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  
+    [delegate selectedCellAtIndex: indexPath.row];
 }
+
+
 
 
 @end

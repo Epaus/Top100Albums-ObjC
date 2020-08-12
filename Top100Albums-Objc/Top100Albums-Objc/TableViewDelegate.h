@@ -7,12 +7,15 @@
 //
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 
-@protocol ViewControllerDelegate
--(void)selectedCellAtIndex:(NSInteger)index;
-@end
+
+
+
 
 @interface TableViewDelegate: NSObject < UITableViewDelegate >
 
+
 @end
+

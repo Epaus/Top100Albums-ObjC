@@ -20,6 +20,7 @@
 		CED88DFA24E216F50025A6F3 /* Networking.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DF924E216F50025A6F3 /* Networking.m */; };
 		CED88DFF24E32B9F0025A6F3 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DFE24E32B9F0025A6F3 /* Utilities.m */; };
 		CED88E0324E37B5E0025A6F3 /* TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88E0224E37B5E0025A6F3 /* TableViewDelegate.m */; };
+		CED88E0624E388B30025A6F3 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88E0524E388B30025A6F3 /* TableViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		CED88DFE24E32B9F0025A6F3 /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		CED88E0124E37B4A0025A6F3 /* TableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDelegate.h; sourceTree = "<group>"; };
 		CED88E0224E37B5E0025A6F3 /* TableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDelegate.m; sourceTree = "<group>"; };
+		CED88E0524E388B30025A6F3 /* TableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
+		CED88E0724E38F960025A6F3 /* TableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				CED88DC624E213E00025A6F3 /* ViewController.h */,
 				CED88E0124E37B4A0025A6F3 /* TableViewDelegate.h */,
 				CED88E0224E37B5E0025A6F3 /* TableViewDelegate.m */,
+				CED88E0524E388B30025A6F3 /* TableViewDataSource.m */,
+				CED88E0724E38F960025A6F3 /* TableViewDataSource.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				CED88DF724E214E80025A6F3 /* AlbumModel.m in Sources */,
 				CED88E0324E37B5E0025A6F3 /* TableViewDelegate.m in Sources */,
 				CED88DC524E213E00025A6F3 /* SceneDelegate.m in Sources */,
+				CED88E0624E388B30025A6F3 /* TableViewDataSource.m in Sources */,
 				CED88DFF24E32B9F0025A6F3 /* Utilities.m in Sources */,
 				CED88DFA24E216F50025A6F3 /* Networking.m in Sources */,
 			);
