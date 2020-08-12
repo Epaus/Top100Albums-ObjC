@@ -9,7 +9,7 @@
 
 @interface Networking: NSObject
 
--(void)makeRequest: (void (^)(NSArray* ))completion;
+-(void)makeRequest: (void (^)(NSArray* results))completion;
 
 
 @end

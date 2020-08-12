@@ -7,19 +7,39 @@
 //
 
 #import "ViewController.h"
-#import "Networking.h"
+
 
 @interface ViewController ()
+@property (nonatomic, strong) NSArray *albums;
+@property (nonatomic, strong) Networking *networking;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation ViewController
+@synthesize albums;
+
+-(instancetype)initWithNetworking:(Networking *)nw {
+    self = [super init];
+    if (self) {
+        _networking = nw;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    Networking * networking = [[Networking alloc] init];
-    [networking makeRequest: nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.refreshData;
+}
+
+-(void)refreshData {
+    __weak ViewController *wself = self;
+      [_networking makeRequest: ^(NSArray* models){
+          wself.albums = models;
+      }];
 }
 
 

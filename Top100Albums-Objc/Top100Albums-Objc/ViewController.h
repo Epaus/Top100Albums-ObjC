@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Networking.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController 
+-(instancetype)initWithNetworking:(Networking *)nw;
 
 @end
 

@@ -7,9 +7,9 @@
 //
 
 #import "Networking.h"
+#import "AlbumModel.h"
 #import "UIKit/UIKit.h"
-
-
+#import "Utilities.h"
 
 @interface Networking()
 
@@ -22,7 +22,7 @@ NSInteger timeOutInterval;
 NSURLSessionDataTask *task;
 
 -(void)makeRequest: (void (^)(NSArray* ))completion {
-    NSMutableArray *models = [[NSMutableArray alloc] init];
+    __block NSArray *models;
     NSString *urlString = @"https://rss.itunes.apple.com/api/v1/us/itunes-music/top-albums/all/100/explicit.json";
     
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:urlString]];
@@ -40,15 +40,49 @@ NSURLSessionDataTask *task;
         NSError *parseError = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
         NSLog(@"The response is - %@",responseDictionary);
-        
+        models = [self parseResponse:responseDictionary];
       }
       else
       {
         NSLog(@"Error");
       }
+     completion(models);
     }];
     [dataTask resume];
+  
     
+}
+
+-(NSArray *)parseResponse: (NSDictionary *)dict {
+   NSMutableArray *models = [[NSMutableArray alloc] init];
+    NSDictionary *results = dict[@"feed"];
+    NSDictionary *results2 = results[@"results"];
+     for (id obj in results2 ) {
+         NSString *releaseDateText = [obj objectForKey:@"releaseDate"];
+         NSDate *releaseDate = [Utilities simpleDateFromString:releaseDateText];
+         
+         NSDictionary *genreText = [obj objectForKey: @""];
+         NSArray *genres = [self genreArrayFromJson:genreText];
+         
+         AlbumModel *model = [[AlbumModel alloc] initWwithArtistName:[obj objectForKey:@"artistName"] albumId:[obj objectForKey:@"albumId"] releaseDate:releaseDate name:[obj objectForKey: @"name"] url:[obj objectForKey:@"url"] genres:genres copyright:[obj objectForKey:@"copyright"] artworkUrl100:[obj objectForKey:@"artworkUrl100"]];
+         
+         [models addObject:model];
+     }
+    
+    return models;
+}
+
+
+
+-(NSArray *) genreArrayFromJson:(NSDictionary *)jsonGenres {
+    NSMutableArray *genres = [[NSMutableArray alloc] init];
+    for (id genre in jsonGenres) {
+        NSString *name = [genre objectForKey: @"name"];
+        if (![name isEqualToString:@"Music"]) {
+            [genres addObject:name];
+        }
+    }
+    return [genres copy];
 }
 
 @end
