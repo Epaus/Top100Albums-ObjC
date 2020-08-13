@@ -7,10 +7,9 @@
 //
 
 #import "DetailViewController.h"
-#import "UIImageView+UIImageView_GetImage.h"
 
 @interface DetailViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *copyright;
 @property (weak, nonatomic) IBOutlet UILabel *albumTitle;
 @property (weak, nonatomic) IBOutlet UILabel *artistName;
@@ -26,6 +25,7 @@
     self.copyright.text = self.model.copyright;
     self.albumTitle.text = self.model.name;
     self.artistName.text = self.model.artistName;
+    self.imageView.image = self.model.image;
 }
 
 /*

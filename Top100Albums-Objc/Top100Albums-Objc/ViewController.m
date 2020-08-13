@@ -12,6 +12,7 @@
 #import "MainTableViewCell.h"
 
 
+
 @interface ViewController ()
 @property (nonatomic, strong) Networking *networking;
 @property (nonatomic, strong) TableViewDataSource *tableDataSource;
@@ -23,7 +24,6 @@
 
 @implementation ViewController
 @synthesize  tableDataSource;
-
 
 
 - (void)viewDidLoad {
@@ -49,28 +49,14 @@
                   [self.tableView reloadData];
               });
     }];
-
-   
-   
 }
 
-- (void)selectedCellAtIndex:(NSInteger)index {
-    
-    self.selectedModel = self.tableDataSource.data[index];
-    
-    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"sender = %@",sender);
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"detailSegue"]) {
         self.detailViewController = [segue destinationViewController];
         MainTableViewCell *mainCell = (MainTableViewCell *)sender;
-        self.detailViewController.model = mainCell.model;
-        // Get destination view
-      
-       
+        AlbumModel *model = mainCell.model;
+        self.detailViewController.model = model;
     }
 }
 

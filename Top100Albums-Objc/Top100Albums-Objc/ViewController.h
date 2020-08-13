@@ -9,12 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Networking.h"
 
-
-@protocol ViewControllerDelegate
-- (void)selectedCellAtIndex:(NSInteger)index;
-@end
-
-@interface ViewController : UIViewController <ViewControllerDelegate>
+@interface ViewController : UIViewController
 
 @end
 

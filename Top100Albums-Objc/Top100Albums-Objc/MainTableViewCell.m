@@ -7,7 +7,6 @@
 //
 
 #import "MainTableViewCell.h"
-#import "UIImageView+UIImageView_GetImage.h"
 
 @interface MainTableViewCell()
 

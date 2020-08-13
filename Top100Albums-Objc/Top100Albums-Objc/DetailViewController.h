@@ -13,6 +13,7 @@
 
 @interface DetailViewController : UIViewController
 @property (nonatomic, strong) AlbumModel *model;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
