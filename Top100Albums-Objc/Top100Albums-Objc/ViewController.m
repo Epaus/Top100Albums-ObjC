@@ -26,11 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
     _networking = [[Networking alloc] init];
-    
-    self.view.backgroundColor = UIColor.whiteColor;
-    NSLog(@"tableView = %@",self.tableView);
-   
    
     tableDataSource = [[TableViewDataSource alloc] initWithNetworking:_networking];
     [self refreshData];
@@ -38,9 +35,6 @@
     tableDelegate = [[TableViewDelegate alloc] init];
     self.tableView.dataSource = self.tableDataSource;
     self.tableView.delegate = self.tableDelegate;
-   
-   
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {

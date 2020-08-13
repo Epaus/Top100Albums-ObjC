@@ -55,16 +55,8 @@
     AlbumModel * model = self.data[indexPath.row];
     cell.albumTitle.text = model.name;
     cell.artistName.text = model.artistName;
-    if ([self.imageArray count] > 0 && self.imageArray[indexPath.row] != nil) {
-        cell.thumbnailImageview.image = self.imageArray[indexPath.row];
-    } else {
-        UIImageView *tempView = [[UIImageView alloc] init];
-        [tempView getImageWithUrl:model.artworkUrl100];
-        self.imageArray[indexPath.row] = tempView.image;
-        cell.thumbnailImageview.image = tempView.image;
-    }
-    
-    
+    [cell.thumbnailImageview getImageWithUrl:model.artworkUrl100];
+
     return cell;
 }
 
