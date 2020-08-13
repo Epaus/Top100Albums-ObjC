@@ -8,13 +8,25 @@
 
 #import "TableViewDataSource.h"
 #import "Networking.h"
+#import "MainTableViewCell.h"
+#import "UIImageView+UIImageView_GetImage.h"
 
 @interface TableViewDataSource()
 @property (nonatomic, strong) Networking * networking;
 @property (nonatomic, strong) NSArray * data;
+@property (nonatomic, strong) NSMutableArray * imageArray;
 @end
 
 @implementation TableViewDataSource
+@synthesize imageArray = _imageArray;
+
+- (NSMutableArray*)imageArray
+{
+    if (!_imageArray) {
+        _imageArray = [[NSMutableArray alloc] initWithCapacity:100];
+    }
+    return _imageArray;
+}
 
 
 -(instancetype)initWithNetworking:(Networking *)nw {
@@ -36,13 +48,23 @@
 
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainViewCell"];
+    MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mainViewCell"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"mainViewCell"];
+        cell = (MainTableViewCell*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"mainViewCell"];
     }
     AlbumModel * model = self.data[indexPath.row];
-    cell.textLabel.text = model.name;
-    cell.detailTextLabel.text = model.artistName;
+    cell.albumTitle.text = model.name;
+    cell.artistName.text = model.artistName;
+    if ([self.imageArray count] > 0 && self.imageArray[indexPath.row] != nil) {
+        cell.thumbnailImageview.image = self.imageArray[indexPath.row];
+    } else {
+        UIImageView *tempView = [[UIImageView alloc] init];
+        [tempView getImageWithUrl:model.artworkUrl100];
+        self.imageArray[indexPath.row] = tempView.image;
+        cell.thumbnailImageview.image = tempView.image;
+    }
+    
+    
     return cell;
 }
 

@@ -21,6 +21,8 @@
 		CED88DFF24E32B9F0025A6F3 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DFE24E32B9F0025A6F3 /* Utilities.m */; };
 		CED88E0324E37B5E0025A6F3 /* TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88E0224E37B5E0025A6F3 /* TableViewDelegate.m */; };
 		CED88E0624E388B30025A6F3 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88E0524E388B30025A6F3 /* TableViewDataSource.m */; };
+		CED88E1724E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88E1624E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.m */; };
+		CED88E1A24E4ADB70025A6F3 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88E1924E4ADB70025A6F3 /* MainTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		CED88E0224E37B5E0025A6F3 /* TableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDelegate.m; sourceTree = "<group>"; };
 		CED88E0524E388B30025A6F3 /* TableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
 		CED88E0724E38F960025A6F3 /* TableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
+		CED88E1524E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_GetImage.h"; sourceTree = "<group>"; };
+		CED88E1624E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_GetImage.m"; sourceTree = "<group>"; };
+		CED88E1824E4ADB70025A6F3 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		CED88E1924E4ADB70025A6F3 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,18 +125,12 @@
 		CED88DBF24E213E00025A6F3 /* Top100Albums-Objc */ = {
 			isa = PBXGroup;
 			children = (
+				CED88E0E24E4A6E00025A6F3 /* Categories */,
+				CED88E0C24E4A52C0025A6F3 /* Project Files */,
+				CED88E0D24E4A55B0025A6F3 /* Views */,
 				CED88DF824E216CE0025A6F3 /* Networking */,
 				CED88DF524E214B30025A6F3 /* Model */,
-				CED88DC024E213E00025A6F3 /* AppDelegate.h */,
-				CED88DC124E213E00025A6F3 /* AppDelegate.m */,
-				CED88DC324E213E00025A6F3 /* SceneDelegate.h */,
-				CED88DC424E213E00025A6F3 /* SceneDelegate.m */,
 				CED88E0024E37AF50025A6F3 /* Controllers */,
-				CED88DC924E213E00025A6F3 /* Main.storyboard */,
-				CED88DCC24E213E10025A6F3 /* Assets.xcassets */,
-				CED88DCE24E213E10025A6F3 /* LaunchScreen.storyboard */,
-				CED88DD124E213E10025A6F3 /* Info.plist */,
-				CED88DD224E213E10025A6F3 /* main.m */,
 				CED88DFD24E32B7D0025A6F3 /* Utilities.h */,
 				CED88DFE24E32B9F0025A6F3 /* Utilities.m */,
 			);
@@ -184,6 +184,40 @@
 				CED88E0724E38F960025A6F3 /* TableViewDataSource.h */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CED88E0C24E4A52C0025A6F3 /* Project Files */ = {
+			isa = PBXGroup;
+			children = (
+				CED88DCC24E213E10025A6F3 /* Assets.xcassets */,
+				CED88DC024E213E00025A6F3 /* AppDelegate.h */,
+				CED88DC124E213E00025A6F3 /* AppDelegate.m */,
+				CED88DC324E213E00025A6F3 /* SceneDelegate.h */,
+				CED88DC424E213E00025A6F3 /* SceneDelegate.m */,
+				CED88DD124E213E10025A6F3 /* Info.plist */,
+				CED88DD224E213E10025A6F3 /* main.m */,
+			);
+			name = "Project Files";
+			sourceTree = "<group>";
+		};
+		CED88E0D24E4A55B0025A6F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CED88DC924E213E00025A6F3 /* Main.storyboard */,
+				CED88DCE24E213E10025A6F3 /* LaunchScreen.storyboard */,
+				CED88E1824E4ADB70025A6F3 /* MainTableViewCell.h */,
+				CED88E1924E4ADB70025A6F3 /* MainTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CED88E0E24E4A6E00025A6F3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CED88E1524E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.h */,
+				CED88E1624E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED88DC824E213E00025A6F3 /* ViewController.m in Sources */,
+				CED88E1A24E4ADB70025A6F3 /* MainTableViewCell.m in Sources */,
 				CED88DC224E213E00025A6F3 /* AppDelegate.m in Sources */,
+				CED88E1724E4AC080025A6F3 /* UIImageView+UIImageView_GetImage.m in Sources */,
 				CED88DD324E213E10025A6F3 /* main.m in Sources */,
 				CED88DF724E214E80025A6F3 /* AlbumModel.m in Sources */,
 				CED88E0324E37B5E0025A6F3 /* TableViewDelegate.m in Sources */,

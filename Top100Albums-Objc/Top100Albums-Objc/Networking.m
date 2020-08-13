@@ -39,7 +39,6 @@ NSURLSessionDataTask *task;
       {
         NSError *parseError = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-        NSLog(@"The response is - %@",responseDictionary);
         models = [self parseResponse:responseDictionary];
       }
       else
