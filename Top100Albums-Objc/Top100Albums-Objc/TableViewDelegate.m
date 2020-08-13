@@ -30,7 +30,7 @@ id <ViewControllerDelegate> delegate;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   
-    [delegate selectedCellAtIndex: indexPath.row];
+     [delegate selectedCellAtIndex: indexPath.row];
 }
 
 

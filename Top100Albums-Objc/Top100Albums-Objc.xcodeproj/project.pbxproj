@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE31689224E5C93A0057C2ED /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE31689124E5C93A0057C2ED /* DetailViewController.m */; };
 		CED88DC224E213E00025A6F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DC124E213E00025A6F3 /* AppDelegate.m */; };
 		CED88DC524E213E00025A6F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DC424E213E00025A6F3 /* SceneDelegate.m */; };
 		CED88DC824E213E00025A6F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DC724E213E00025A6F3 /* ViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE31689024E5C93A0057C2ED /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CE31689124E5C93A0057C2ED /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CED88DBD24E213E00025A6F3 /* Top100Albums-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top100Albums-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED88DC024E213E00025A6F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED88DC124E213E00025A6F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				CED88E0224E37B5E0025A6F3 /* TableViewDelegate.m */,
 				CED88E0524E388B30025A6F3 /* TableViewDataSource.m */,
 				CED88E0724E38F960025A6F3 /* TableViewDataSource.h */,
+				CE31689024E5C93A0057C2ED /* DetailViewController.h */,
+				CE31689124E5C93A0057C2ED /* DetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				CED88E0624E388B30025A6F3 /* TableViewDataSource.m in Sources */,
 				CED88DFF24E32B9F0025A6F3 /* Utilities.m in Sources */,
 				CED88DFA24E216F50025A6F3 /* Networking.m in Sources */,
+				CE31689224E5C93A0057C2ED /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

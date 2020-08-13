@@ -7,12 +7,18 @@
 //
 
 #import "MainTableViewCell.h"
+#import "UIImageView+UIImageView_GetImage.h"
+
+@interface MainTableViewCell()
+
+@end
 
 @implementation MainTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+   
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

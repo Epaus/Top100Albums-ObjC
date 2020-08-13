@@ -12,6 +12,8 @@
 #import "AlbumModel.h"
 
 @interface TableViewDataSource: NSObject < UITableViewDataSource >
+@property (nonatomic, strong) NSArray * data;
+
 -(instancetype)initWithNetworking:(Networking *)nw;
 -(void)refreshData:(void (^)(void))completion;
 @end

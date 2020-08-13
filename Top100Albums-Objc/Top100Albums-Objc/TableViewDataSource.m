@@ -13,7 +13,7 @@
 
 @interface TableViewDataSource()
 @property (nonatomic, strong) Networking * networking;
-@property (nonatomic, strong) NSArray * data;
+
 @property (nonatomic, strong) NSMutableArray * imageArray;
 @end
 
@@ -53,9 +53,11 @@
         cell = (MainTableViewCell*)[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"mainViewCell"];
     }
     AlbumModel * model = self.data[indexPath.row];
+    cell.model = model;
     cell.albumTitle.text = model.name;
     cell.artistName.text = model.artistName;
     [cell.thumbnailImageview getImageWithUrl:model.artworkUrl100];
+   
 
     return cell;
 }

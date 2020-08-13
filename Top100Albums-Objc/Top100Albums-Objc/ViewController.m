@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "TableViewDelegate.h"
 #import "TableViewDataSource.h"
+#import "DetailViewController.h"
+#import "MainTableViewCell.h"
 
 
 @interface ViewController ()
@@ -16,6 +18,8 @@
 @property (nonatomic, strong) TableViewDelegate * tableDelegate;
 @property (nonatomic, strong) TableViewDataSource *tableDataSource;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) DetailViewController *detailViewController;
+@property (nonatomic, strong) AlbumModel * selectedModel;
 
 @end
 
@@ -54,7 +58,23 @@
 }
 
 - (void)selectedCellAtIndex:(NSInteger)index {
-    NSLog(@"cell selected = %ld",(long)index);
+    
+    self.selectedModel = self.tableDataSource.data[index];
+    
+    [self performSegueWithIdentifier:@"detailSegue" sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"sender = %@",sender);
+    if ([[segue identifier] isEqualToString:@"detailSegue"]) {
+        self.detailViewController = [segue destinationViewController];
+        MainTableViewCell *mainCell = (MainTableViewCell *)sender;
+        self.detailViewController.model = mainCell.model;
+        // Get destination view
+      
+       
+    }
 }
 
 
