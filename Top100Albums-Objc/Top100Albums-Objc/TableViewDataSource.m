@@ -9,6 +9,7 @@
 #import "TableViewDataSource.h"
 #import "Networking.h"
 #import "MainTableViewCell.h"
+#import "UIImageView+UIImageView_GetImage.h"
 
 @interface TableViewDataSource()
 @property (nonatomic, strong) Networking * networking;
@@ -55,8 +56,7 @@
     cell.model = model;
     cell.albumTitle.text = model.name;
     cell.artistName.text = model.artistName;
-    cell.thumbnailImageview.image = model.image;
-
+    [cell.thumbnailImageview getImageWithUrl:model.artworkUrl100];
     return cell;
 }
 

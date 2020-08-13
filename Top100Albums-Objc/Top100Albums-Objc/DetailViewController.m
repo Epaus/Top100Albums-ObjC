@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "UIImageView+UIImageView_GetImage.h"
 
 @interface DetailViewController ()
 
@@ -21,21 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   // [self.imageView getImageWithUrl:self.model.artworkUrl100];
+    [self.imageView getImageWithUrl:self.model.artworkUrl100];
     self.copyright.text = self.model.copyright;
     self.albumTitle.text = self.model.name;
     self.artistName.text = self.model.artistName;
-    self.imageView.image = self.model.image;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)iTunesButtonTapped:(id)sender {
+    NSURL *url = [NSURL URLWithString:self.model.url];
+    NSDictionary *options = @{UIApplicationOpenURLOptionUniversalLinksOnly : @NO};
+    [[UIApplication sharedApplication] openURL:url options:options completionHandler:nil];
 }
-*/
 
 @end

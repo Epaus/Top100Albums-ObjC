@@ -12,11 +12,25 @@
             <objects>
                 <viewController storyboardIdentifier="mainController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3z-Yz-zxK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S5e-mW-Q4m">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LSF-Xa-rR8">
+                                            <rect key="frame" x="197" y="351" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Frh-m2-grT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -30,8 +44,8 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QP9-si-EtF">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="AXc-tf-udM"/>
-                                                        <constraint firstAttribute="height" constant="100" id="ow5-qz-Ezn"/>
+                                                        <constraint firstAttribute="width" constant="100" id="AXc-tf-udM" userLabel="width = 100.5"/>
+                                                        <constraint firstAttribute="height" constant="100" id="ow5-qz-Ezn" userLabel="height = 100.5"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qoh-67-h2K">
@@ -75,14 +89,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Frh-m2-grT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FOQ-Gn-OJs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w3z-Yz-zxK" secondAttribute="bottom" id="O3Q-Gj-mqI"/>
                             <constraint firstItem="Frh-m2-grT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="TN5-Md-Sh1"/>
                             <constraint firstItem="Frh-m2-grT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b4Q-Dj-isy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w3z-Yz-zxK" secondAttribute="trailing" id="fNk-ii-i52"/>
+                            <constraint firstItem="w3z-Yz-zxK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kZ2-DF-Qqz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Frh-m2-grT" secondAttribute="trailing" id="s5x-JT-hPm"/>
+                            <constraint firstItem="w3z-Yz-zxK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ue1-7o-7Oh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Top 100 Albums" id="iYC-oD-Ngl"/>
                     <connections>
+                        <outlet property="activityView" destination="LSF-Xa-rR8" id="bUz-Hs-I2O"/>
+                        <outlet property="blurView" destination="w3z-Yz-zxK" id="to8-ze-qgF"/>
                         <outlet property="tableView" destination="Frh-m2-grT" id="8aD-BD-yQu"/>
                     </connections>
                 </viewController>
@@ -118,13 +138,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="yic-eO-gdL" userLabel="Title Stack">
                                 <rect key="frame" x="20" y="494" width="374" height="87.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-QM-IZ6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-QM-IZ6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="QEI-Jk-5bI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QEI-Jk-5bI">
                                         <rect key="frame" x="0.0" y="68" width="374" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -139,6 +159,9 @@
                                 <state key="normal" title="iTunes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="iTunesButtonTapped:" destination="gIi-na-CFN" eventType="touchUpInside" id="fbF-4a-2AM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -10,6 +10,6 @@
 #import "Networking.h"
 
 @interface ViewController : UIViewController
-
+-(void)reloadTable:(void (^)(void))completion;
 @end
 
