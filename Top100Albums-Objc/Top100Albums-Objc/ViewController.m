@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "TableViewDelegate.h"
 #import "TableViewDataSource.h"
 #import "DetailViewController.h"
 #import "MainTableViewCell.h"
@@ -15,7 +14,6 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) Networking *networking;
-@property (nonatomic, strong) TableViewDelegate * tableDelegate;
 @property (nonatomic, strong) TableViewDataSource *tableDataSource;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) DetailViewController *detailViewController;
@@ -24,7 +22,7 @@
 @end
 
 @implementation ViewController
-@synthesize tableDelegate, tableDataSource;
+@synthesize  tableDataSource;
 
 
 
@@ -35,10 +33,9 @@
    
     tableDataSource = [[TableViewDataSource alloc] initWithNetworking:_networking];
     [self refreshData];
-    
-    tableDelegate = [[TableViewDelegate alloc] init];
+   
     self.tableView.dataSource = self.tableDataSource;
-    self.tableView.delegate = self.tableDelegate;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated {
