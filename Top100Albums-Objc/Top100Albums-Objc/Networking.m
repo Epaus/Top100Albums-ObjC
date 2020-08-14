@@ -54,9 +54,9 @@ NSURLSessionDataTask *task;
 
 -(NSArray *)parseResponse: (NSDictionary *)dict {
    NSMutableArray *models = [[NSMutableArray alloc] init];
-    NSDictionary *results = dict[@"feed"];
-    NSDictionary *results2 = results[@"results"];
-     for (id obj in results2 ) {
+    NSDictionary *feed = dict[@"feed"];
+    NSDictionary *results = feed[@"results"];
+     for (id obj in results ) {
          NSString *releaseDateText = [obj objectForKey:@"releaseDate"];
          NSDate *releaseDate = [Utilities simpleDateFromString:releaseDateText];
          
