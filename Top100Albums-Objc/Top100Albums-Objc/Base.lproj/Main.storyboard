@@ -47,20 +47,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QP9-si-EtF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="AXc-tf-udM" userLabel="width = 100.5"/>
-                                                        <constraint firstAttribute="height" constant="100" id="ow5-qz-Ezn" userLabel="height = 100.5"/>
+                                                        <constraint firstAttribute="width" constant="100" identifier="thumbnailWidth" id="AXc-tf-udM" userLabel="width = 100.0"/>
+                                                        <constraint firstAttribute="width" secondItem="QP9-si-EtF" secondAttribute="height" multiplier="1:1" identifier="thumbnailAspectRatio" id="Fgf-Nk-0rr"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qoh-67-h2K">
-                                                    <rect key="frame" x="108" y="19" width="286" height="21.5"/>
+                                                    <rect key="frame" x="108" y="19" width="286" height="46"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="NUD-zg-5xg">
                                                     <rect key="frame" x="108" y="73" width="286" height="19.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="19.5" id="Hm0-lr-W5w"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -68,14 +71,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="NUD-zg-5xg" firstAttribute="leading" secondItem="QP9-si-EtF" secondAttribute="trailing" constant="8" id="IMN-HM-gcY"/>
-                                                <constraint firstAttribute="bottom" secondItem="QP9-si-EtF" secondAttribute="bottom" id="Kre-9y-Zbw"/>
                                                 <constraint firstItem="NUD-zg-5xg" firstAttribute="trailing" secondItem="iep-8T-T7c" secondAttribute="trailingMargin" id="Lte-Jt-Qty"/>
+                                                <constraint firstItem="NUD-zg-5xg" firstAttribute="top" secondItem="Qoh-67-h2K" secondAttribute="bottom" constant="8" id="Mw6-SU-iQn"/>
                                                 <constraint firstItem="QP9-si-EtF" firstAttribute="leading" secondItem="iep-8T-T7c" secondAttribute="leading" id="NBV-yp-JUh"/>
                                                 <constraint firstAttribute="bottom" secondItem="NUD-zg-5xg" secondAttribute="bottom" constant="8" id="Nfu-Ng-qOM"/>
                                                 <constraint firstItem="Qoh-67-h2K" firstAttribute="trailing" secondItem="iep-8T-T7c" secondAttribute="trailingMargin" id="VWw-Hv-dL3"/>
-                                                <constraint firstItem="QP9-si-EtF" firstAttribute="top" secondItem="iep-8T-T7c" secondAttribute="top" id="fZ3-fc-byV"/>
+                                                <constraint firstItem="QP9-si-EtF" firstAttribute="top" secondItem="iep-8T-T7c" secondAttribute="top" identifier="thumbnailTop" id="fZ3-fc-byV"/>
                                                 <constraint firstItem="Qoh-67-h2K" firstAttribute="top" secondItem="iep-8T-T7c" secondAttribute="topMargin" constant="8" id="hC7-L8-5Hm"/>
-                                                <constraint firstAttribute="bottom" secondItem="QP9-si-EtF" secondAttribute="bottom" id="jYM-a6-B92"/>
                                                 <constraint firstItem="Qoh-67-h2K" firstAttribute="leading" secondItem="QP9-si-EtF" secondAttribute="trailing" constant="8" id="ucD-nM-9gH"/>
                                             </constraints>
                                         </tableViewCellContentView>
