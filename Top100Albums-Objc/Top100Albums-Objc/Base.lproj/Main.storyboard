@@ -130,7 +130,7 @@
                                         <rect key="frame" x="8" y="8" width="406" height="900"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="w7H-kZ-4hE" userLabel="imageStack">
-                                                <rect key="frame" x="16" y="0.0" width="374" height="445"/>
+                                                <rect key="frame" x="12" y="-8" width="374" height="445"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CKd-Hw-kl1">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -151,7 +151,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="yic-eO-gdL" userLabel="Title Stack">
-                                                <rect key="frame" x="20" y="515" width="366" height="118"/>
+                                                <rect key="frame" x="20" y="507" width="366" height="118"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-QM-IZ6">
                                                         <rect key="frame" x="0.0" y="0.0" width="366" height="41"/>
@@ -174,7 +174,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-7d-wFk">
-                                                <rect key="frame" x="20" y="783" width="366" height="57"/>
+                                                <rect key="frame" x="20" y="775" width="366" height="57"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                                 <state key="normal" title="iTunes">
@@ -188,10 +188,10 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="yic-eO-gdL" firstAttribute="centerX" secondItem="PaL-u5-rRw" secondAttribute="centerX" id="1rK-uY-1J8"/>
-                                            <constraint firstItem="w7H-kZ-4hE" firstAttribute="centerX" secondItem="PaL-u5-rRw" secondAttribute="centerX" id="7eX-bq-TWW"/>
+                                            <constraint firstItem="w7H-kZ-4hE" firstAttribute="centerX" secondItem="PaL-u5-rRw" secondAttribute="centerX" constant="-4" id="7eX-bq-TWW"/>
                                             <constraint firstItem="yic-eO-gdL" firstAttribute="top" secondItem="w7H-kZ-4hE" secondAttribute="bottom" constant="70" id="C9w-0j-n5p"/>
                                             <constraint firstItem="WF7-7d-wFk" firstAttribute="top" secondItem="yic-eO-gdL" secondAttribute="bottom" constant="150" id="IJc-sG-m61"/>
-                                            <constraint firstItem="w7H-kZ-4hE" firstAttribute="top" secondItem="PaL-u5-rRw" secondAttribute="top" id="LhL-Z0-Z9E"/>
+                                            <constraint firstItem="w7H-kZ-4hE" firstAttribute="top" secondItem="PaL-u5-rRw" secondAttribute="top" constant="-8" id="LhL-Z0-Z9E"/>
                                             <constraint firstAttribute="height" constant="900" id="Owg-Xk-1vx"/>
                                             <constraint firstAttribute="trailing" secondItem="WF7-7d-wFk" secondAttribute="trailing" constant="20" id="QfM-FW-ne0"/>
                                             <constraint firstAttribute="trailing" secondItem="yic-eO-gdL" secondAttribute="trailing" constant="20" id="YxQ-l5-wC5"/>
