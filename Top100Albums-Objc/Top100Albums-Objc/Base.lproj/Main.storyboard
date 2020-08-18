@@ -174,7 +174,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-7d-wFk">
-                                                <rect key="frame" x="20" y="912.5" width="366" height="57"/>
+                                                <rect key="frame" x="20" y="783" width="366" height="57"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                                 <state key="normal" title="iTunes">
@@ -190,19 +190,18 @@
                                             <constraint firstItem="yic-eO-gdL" firstAttribute="centerX" secondItem="PaL-u5-rRw" secondAttribute="centerX" id="1rK-uY-1J8"/>
                                             <constraint firstItem="w7H-kZ-4hE" firstAttribute="centerX" secondItem="PaL-u5-rRw" secondAttribute="centerX" id="7eX-bq-TWW"/>
                                             <constraint firstItem="yic-eO-gdL" firstAttribute="top" secondItem="w7H-kZ-4hE" secondAttribute="bottom" constant="70" id="C9w-0j-n5p"/>
-                                            <constraint firstItem="WF7-7d-wFk" firstAttribute="top" secondItem="yic-eO-gdL" secondAttribute="bottom" constant="279.5" id="IJc-sG-m61"/>
+                                            <constraint firstItem="WF7-7d-wFk" firstAttribute="top" secondItem="yic-eO-gdL" secondAttribute="bottom" constant="150" id="IJc-sG-m61"/>
                                             <constraint firstItem="w7H-kZ-4hE" firstAttribute="top" secondItem="PaL-u5-rRw" secondAttribute="top" id="LhL-Z0-Z9E"/>
                                             <constraint firstAttribute="height" constant="900" id="Owg-Xk-1vx"/>
                                             <constraint firstAttribute="trailing" secondItem="WF7-7d-wFk" secondAttribute="trailing" constant="20" id="QfM-FW-ne0"/>
                                             <constraint firstAttribute="trailing" secondItem="yic-eO-gdL" secondAttribute="trailing" constant="20" id="YxQ-l5-wC5"/>
-                                            <constraint firstItem="WF7-7d-wFk" firstAttribute="centerX" secondItem="PaL-u5-rRw" secondAttribute="centerX" id="cHo-3h-Wzd"/>
                                             <constraint firstItem="WF7-7d-wFk" firstAttribute="leading" secondItem="PaL-u5-rRw" secondAttribute="leading" constant="20" id="lNk-cW-z2W"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="PaL-u5-rRw" firstAttribute="leading" secondItem="Akk-h1-zT2" secondAttribute="leadingMargin" id="0w2-5p-ycm"/>
-                                    <constraint firstAttribute="bottom" secondItem="PaL-u5-rRw" secondAttribute="bottom" constant="-154" id="3Pi-NU-rM5"/>
+                                    <constraint firstAttribute="bottom" secondItem="PaL-u5-rRw" secondAttribute="bottom" constant="-41" id="3Pi-NU-rM5"/>
                                     <constraint firstItem="PaL-u5-rRw" firstAttribute="top" secondItem="Akk-h1-zT2" secondAttribute="topMargin" id="7Ws-vl-hxl"/>
                                     <constraint firstItem="PaL-u5-rRw" firstAttribute="trailing" secondItem="iaw-AL-szG" secondAttribute="trailing" id="Bys-xe-ody"/>
                                     <constraint firstAttribute="trailing" secondItem="PaL-u5-rRw" secondAttribute="trailing" id="VN2-9l-Um5"/>
