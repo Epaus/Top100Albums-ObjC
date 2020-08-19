@@ -64,8 +64,6 @@ NSURLSessionDataTask *task;
          NSArray *genres = [self genreArrayFromJson:genreText];
          
          AlbumModel *model = [[AlbumModel alloc] initWwithArtistName:[obj objectForKey:@"artistName"] albumId:[obj objectForKey:@"albumId"] releaseDate:releaseDate name:[obj objectForKey: @"name"] url:[obj objectForKey:@"url"] genres:genres copyright:[obj objectForKey:@"copyright"] artworkUrl100:[obj objectForKey:@"artworkUrl100"]];
-         
-         [self getImageWithUrl:model.artworkUrl100 model:model];
          [models addObject:model];
      }
     
@@ -83,31 +81,6 @@ NSURLSessionDataTask *task;
         }
     }
     return [genres copy];
-}
-
--(void)getImageWithUrl:(NSString *)url model:(AlbumModel*)model {
-    
-   
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:url]];
-    NSURLSession *session = [NSURLSession sharedSession];
-    
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                      {
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        if(httpResponse.statusCode == 200)
-        {
-            UIImage *image = [[UIImage alloc] initWithData:data];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                model.image = image;
-            });
-            
-        }
-        else
-        {
-            NSLog(@"Error");
-        }
-    }];
-    [dataTask resume];
 }
 
 @end

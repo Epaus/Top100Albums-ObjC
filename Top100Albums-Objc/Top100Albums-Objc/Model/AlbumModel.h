@@ -19,7 +19,6 @@
 @property (strong) NSArray * genres;
 @property (strong) NSString * copyright;
 @property (strong) NSString * artworkUrl100;
-@property (nonatomic,strong) UIImage * image;
 
 -(instancetype)initWwithArtistName:(NSString *)artistName albumId:(NSString *)albumId  releaseDate:(NSDate *)releaseDate name:(NSString *)name url:(NSString *)url genres:(NSArray *)genres  copyright:(NSString *)copyright artworkUrl100:(NSString *)artworkUrl100;
  

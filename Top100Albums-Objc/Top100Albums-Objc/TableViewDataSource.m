@@ -56,7 +56,7 @@
     cell.model = model;
     cell.albumTitle.text = model.name;
     cell.artistName.text = model.artistName;
-    [cell.thumbnailImageview getImageWithUrl:model.artworkUrl100];
+    [cell downloadImageWithUrlString:model.artworkUrl100];
     return cell;
 }
 
