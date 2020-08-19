@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *artistName;
 @property (nonatomic, strong) AlbumModel * model;
 
--(void)downloadImageWithUrlString:(NSString *)urlString;
 @end
 
 NS_ASSUME_NONNULL_END

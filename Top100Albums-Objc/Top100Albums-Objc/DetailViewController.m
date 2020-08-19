@@ -21,8 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.imageView getImageWithUrl:self.model.artworkUrl100];
+    
+    [self.imageView downloadImageWithUrlString:self.model.artworkUrl100];
     self.copyright.text = self.model.copyright;
     self.albumTitle.text = self.model.name;
     self.artistName.text = self.model.artistName;

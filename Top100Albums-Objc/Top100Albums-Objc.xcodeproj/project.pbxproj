@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE31689224E5C93A0057C2ED /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE31689124E5C93A0057C2ED /* DetailViewController.m */; };
-		CE31689624E5F9590057C2ED /* UIImageView+UIImageView_GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE31689524E5F9590057C2ED /* UIImageView+UIImageView_GetImage.m */; };
+		CE8D982A24ECE49C00718F99 /* UIImageView+UIImageView_GetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D982924ECE49C00718F99 /* UIImageView+UIImageView_GetImage.m */; };
 		CED88DC224E213E00025A6F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DC124E213E00025A6F3 /* AppDelegate.m */; };
 		CED88DC524E213E00025A6F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DC424E213E00025A6F3 /* SceneDelegate.m */; };
 		CED88DC824E213E00025A6F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED88DC724E213E00025A6F3 /* ViewController.m */; };
@@ -45,8 +45,8 @@
 /* Begin PBXFileReference section */
 		CE31689024E5C93A0057C2ED /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CE31689124E5C93A0057C2ED /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		CE31689424E5F9590057C2ED /* UIImageView+UIImageView_GetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_GetImage.h"; sourceTree = "<group>"; };
-		CE31689524E5F9590057C2ED /* UIImageView+UIImageView_GetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_GetImage.m"; sourceTree = "<group>"; };
+		CE8D982824ECE49C00718F99 /* UIImageView+UIImageView_GetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIImageView_GetImage.h"; sourceTree = "<group>"; };
+		CE8D982924ECE49C00718F99 /* UIImageView+UIImageView_GetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIImageView_GetImage.m"; sourceTree = "<group>"; };
 		CED88DBD24E213E00025A6F3 /* Top100Albums-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top100Albums-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED88DC024E213E00025A6F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED88DC124E213E00025A6F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,13 +102,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE31689324E5F7FE0057C2ED /* Categorires */ = {
+		CE8D982724ECE48B00718F99 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				CE31689424E5F9590057C2ED /* UIImageView+UIImageView_GetImage.h */,
-				CE31689524E5F9590057C2ED /* UIImageView+UIImageView_GetImage.m */,
+				CE8D982824ECE49C00718F99 /* UIImageView+UIImageView_GetImage.h */,
+				CE8D982924ECE49C00718F99 /* UIImageView+UIImageView_GetImage.m */,
 			);
-			name = Categorires;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		CED88DB424E213E00025A6F3 = {
@@ -134,7 +134,7 @@
 		CED88DBF24E213E00025A6F3 /* Top100Albums-Objc */ = {
 			isa = PBXGroup;
 			children = (
-				CE31689324E5F7FE0057C2ED /* Categorires */,
+				CE8D982724ECE48B00718F99 /* Categories */,
 				CED88E0C24E4A52C0025A6F3 /* Project Files */,
 				CED88E0D24E4A55B0025A6F3 /* Views */,
 				CED88DF824E216CE0025A6F3 /* Networking */,
@@ -359,7 +359,7 @@
 				CED88E0624E388B30025A6F3 /* TableViewDataSource.m in Sources */,
 				CED88DFF24E32B9F0025A6F3 /* Utilities.m in Sources */,
 				CED88DFA24E216F50025A6F3 /* Networking.m in Sources */,
-				CE31689624E5F9590057C2ED /* UIImageView+UIImageView_GetImage.m in Sources */,
+				CE8D982A24ECE49C00718F99 /* UIImageView+UIImageView_GetImage.m in Sources */,
 				CE31689224E5C93A0057C2ED /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

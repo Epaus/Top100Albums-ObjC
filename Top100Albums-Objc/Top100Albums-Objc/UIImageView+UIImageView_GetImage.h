@@ -11,7 +11,7 @@
 
 
 @interface UIImageView (UIImageView_GetImage)
--(void)getImageWithUrl:(NSString *)url;
+-(void)downloadImageWithUrlString:(NSString *)urlString;
 @end
 
 
